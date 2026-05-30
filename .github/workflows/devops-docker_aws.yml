@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main ]
     paths:
-      - src/**
+      - app/**
   pull_request:
     branches: [ main ]
     paths:
-      - src/**
+      - app/**
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
         with:
           context: .
           push: true 
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/galeria:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/repasodawebt2:latest
 
   # cÃ³digo aÃ±adido
   aws:
